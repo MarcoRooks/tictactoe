@@ -6,11 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="body">
+    <div class="checkboard " id="checkboard">
+        <div class="cell" id="slot1" data-cell></div>
+        <div class="cell" id="slot2" data-cell></div>
+        <div class="cell" id="slot3" data-cell></div>
+        <div class="cell" id="slot4" data-cell></div>
+        <div class="cell" id="slot5" data-cell></div>
+        <div class="cell" id="slot6" data-cell></div>
+        <div class="cell" id="slot7" data-cell></div>
+        <div class="cell" id="slot8" data-cell></div>
+        <div class="cell" id="slot9" data-cell></div>
+    </div>
+
+    <div class="winning-message" id="winning-message">
+        <div class="winner"></div> <!-- winner messge it can either be X or O therefore it has to be empty for later -->
+        <button class="restart-button">RESTART</button>
+    </div>
+
 
 </body>
+
+<script src="script.js"></script>
 
 </html>

@@ -1,1 +1,82 @@
-et
+/* General Conditions */
+.body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.checkboard{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+}
+
+.cell{
+    border: 1px solid black;
+    height: 20vh;
+    width:20vw;
+    padding: 4px;
+    cursor: pointer;
+}
+
+/* The X and O style and conditioning  */
+.cell.x {
+    content: url(close.png);
+    cursor: not-allowed;
+}
+
+.cell.o {
+    content: url(o.png);
+    cursor: not-allowed;
+}
+
+/* Hover effect of the X and O 
+    -Select the whole board and then specify which slot is being selected with hover option*/
+.checkboard.x .cell:not(.x):not(.o):hover{
+    content: url(close.png);
+    opacity: .3;
+}
+
+.checkboard.o .cell:not(.x):not(.o):hover{
+    content: url(o.png);
+    opacity: .3;
+}
+
+
+
+/* removing the left side border */
+#slot1, #slot4, #slot7 {
+    border-left: none;
+}
+
+/* removing the top border */
+#slot1, #slot2, #slot3{
+    border-top: none;
+}
+/* removing right border */
+#slot3, #slot6, #slot9{
+    border-right: none;
+}
+/* removing bottom border */
+#slot7, #slot8, #slot9{
+    border-bottom:none;
+}
+
+/* Winner */
+.winning-message{
+    display: flex;
+}
+
+
+
+/* media queries  */
+@media screen and (min-width:640px) {
+    .cell{
+        border: 1px solid black;
+        height: 180px;
+        width:180px;
+        padding: 4px;
+    }
+}
